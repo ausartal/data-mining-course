@@ -1,6 +1,7 @@
 # Tugas Data Mining - Data Manipulation & Visualisation
+# Semua Assignment (1-10) dalam satu file
 # Nama  : Ahmad Nabah Falah
-# NRP   : (isi NRP kamu)
+# NRP   : (isi NRP)
 
 import pandas as pd
 import matplotlib
