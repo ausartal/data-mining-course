@@ -1,7 +1,3 @@
-# Tugas Data Mining - Assignment 9
-# Nama  : Ahmad Nabah Falah
-# NRP   : (isi NRP)
-
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")

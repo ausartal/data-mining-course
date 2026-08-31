@@ -1,17 +1,12 @@
-# Tugas Data Mining - Data Manipulation & Visualisation
-# Semua Assignment (1-10) dalam satu file
-# Nama  : Ahmad Nabah Falah
-# NRP   : (isi NRP)
-
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ============================================================
+
 # 1. Load dataset dan tampilkan
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 1 : Load Dataset Titanic")
 print("=" * 50)
@@ -20,9 +15,9 @@ dataset = pd.read_csv("Titanic-Dataset.csv")
 print(dataset)
 print()
 
-# ============================================================
+
 # 2. Jumlah baris dan kolom
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 2 : Jumlah Baris dan Kolom")
 print("=" * 50)
@@ -34,9 +29,9 @@ print("Jumlah baris :", rows)
 print("Jumlah kolom :", cols)
 print()
 
-# ============================================================
+
 # 3. Ambil kolom fitur
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 3 : Data Fitur")
 print("=" * 50)
@@ -45,9 +40,9 @@ data = dataset[["Name", "Sex", "Age", "Pclass", "Fare"]]
 print(data)
 print()
 
-# ============================================================
+
 # 4. Ambil kolom kelas
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 4 : Data Kelas (Survived)")
 print("=" * 50)
@@ -56,9 +51,9 @@ kelas = dataset["Survived"]
 print(kelas)
 print()
 
-# ============================================================
+
 # 5. Tambah kolom Relatives
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 5 : Tambah Fitur Relatives")
 print("=" * 50)
@@ -67,9 +62,9 @@ data["Relatives"] = dataset["SibSp"] + dataset["Parch"]
 print(data)
 print()
 
-# ============================================================
+
 # 6. Hitung penumpang per Pclass
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 6 : Jumlah Penumpang per Pclass")
 print("=" * 50)
@@ -81,9 +76,9 @@ for i in pclass_count.index:
     print("Pclass", i, ":", pclass_count[i], "penumpang")
 print()
 
-# ============================================================
+
 # 7. Hitung penumpang per Sex
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 7 : Jumlah Penumpang per Sex")
 print("=" * 50)
@@ -94,9 +89,9 @@ for i in sex_count.index:
     print(i, ":", sex_count[i], "penumpang")
 print()
 
-# ============================================================
+
 # 8. Selamat dan tidak selamat per Pclass
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 8 : Selamat/Tidak Selamat per Pclass")
 print("=" * 50)
@@ -108,9 +103,9 @@ for pclass_val in sorted(dataset["Pclass"].unique()):
     print("Pclass", pclass_val, "-> Tidak Selamat:", tidak_selamat, ", Selamat:", selamat)
 print()
 
-# ============================================================
+
 # 9. Visualisasi Sex vs urutan data
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 9 : Visualisasi Sex")
 print("=" * 50)
@@ -149,9 +144,9 @@ plt.close()
 print("Plot berhasil disimpan : assignment_9_sex.png")
 print()
 
-# ============================================================
+
 # 10. Visualisasi Age vs urutan data
-# ============================================================
+
 print("=" * 50)
 print("ASSIGNMENT 10 : Visualisasi Age")
 print("=" * 50)
