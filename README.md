@@ -1,12 +1,20 @@
 # Data Mining Course
 
-Tugas mata kuliah Data Mining - Data Manipulation & Visualisation
+Repository ini dibuat untuk mempelajari mata kuliah **Data Mining**.
 
 ## Dataset
 
 Dataset yang digunakan: **Titanic-Dataset.csv**
 
-## Daftar Assignment
+## Struktur Repository
+
+```
+Code/
+├── Data Manipulation & Visualisation/   # Tugas 1 - Manipulasi & Visualisasi Data
+└── Data Normalization/                  # Tugas 2 - Normalisasi Data
+```
+
+## Tugas 1 - Data Manipulation & Visualisation
 
 | No | File | Deskripsi |
 |----|------|-----------|
@@ -23,25 +31,43 @@ Dataset yang digunakan: **Titanic-Dataset.csv**
 
 File `titanic_assign.py` berisi semua assignment dalam satu file.
 
-## Cara Menjalankan
+### Cara Menjalankan
 
 ```bash
+cd "Code/Data Manipulation & Visualisation"
 python assignment1.py
 python assignment2.py
 ...
 python assignment10.py
 ```
 
-Atau jalankan semua sekaligus:
-
-```bash
-python titanic_assign.py
-```
-
-## Output Visualisasi
+### Output Visualisasi
 
 - `assignment_9_sex.png` - Scatter plot Sex berdasarkan Survived
 - `assignment_10_age.png` - Scatter plot Age berdasarkan Survived
+
+## Tugas 2 - Data Normalization
+
+| No | File | Deskripsi |
+|----|------|-----------|
+| 1 | `assignment1.py` | Load dataset dan tampilkan |
+| 2 | `assignment2.py` | Jumlah baris dan kolom |
+| 3 | `assignment3.py` | Ambil kolom fitur (Age, Fare) |
+| 4 | `assignment4.py` | Ambil kolom kelas (Survived) |
+| 5 | `assignment5.py` | Isi missing value Age dengan mean per class |
+| 6 | `assignment6.py` | Normalisasi Min-Max (0-1) |
+| 7 | `assignment7.py` | Normalisasi Z-Score |
+| 8 | `assignment8.py` | Normalisasi Sigmoidal |
+
+### Cara Menjalankan
+
+```bash
+cd "Code/Data Normalization"
+python assignment1.py
+python assignment2.py
+...
+python assignment8.py
+```
 
 ## Penulis
 
