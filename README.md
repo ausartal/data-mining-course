@@ -1,6 +1,6 @@
 # Data Mining Course
 
-Repository tugas mata kuliah Data Mining.
+Repository tugas mata kuliah **Data Mining**.
 
 ## Struktur Repository
 
@@ -8,7 +8,9 @@ Repository tugas mata kuliah Data Mining.
 Code/
 |-- Data Manipulation & Visualisation/
 |-- Data Normalization/
-`-- Classification/
+|-- Classification/
+|-- Validation Model/
+`-- Decision Tree/
 ```
 
 ## Daftar Materi
@@ -17,23 +19,31 @@ Code/
 |---|---|
 | `Code/Data Manipulation & Visualisation` | Manipulasi dan visualisasi data Titanic |
 | `Code/Data Normalization` | Normalisasi Min-Max, Z-Score, dan Sigmoidal |
-| `Code/Classification` | Klasifikasi k-NN menggunakan fitur Age dan Fare |
+| `Code/Classification` | Klasifikasi k-Nearest Neighbor (k-NN) |
+| `Code/Validation Model` | Validasi model Hold-Out, 10-Fold, dan Leave-One-Out |
+| `Code/Decision Tree` | Klasifikasi dengan Decision Tree |
 
 Setiap assignment disimpan dalam file Python yang berbeda agar dapat dijalankan satu per satu.
+
+## Dataset
+
+Dataset yang digunakan pada repository ini adalah data **Titanic**.
 
 ## Cara Menjalankan
 
 Masuk ke folder materi yang ingin dijalankan, kemudian jalankan file assignment.
 
 ```bash
+cd "Code/Decision Tree"
 python assignment1.py
 ```
 
-Library yang digunakan:
+## Library yang Digunakan
 
 - pandas
 - numpy
 - matplotlib
+- scikit-learn
 
 ## Penulis
 
