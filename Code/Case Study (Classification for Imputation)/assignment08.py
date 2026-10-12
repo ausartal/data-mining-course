@@ -1,0 +1,44 @@
+import os
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+
+folder = os.path.dirname(os.path.abspath(__file__))
+dataset = pd.read_csv(os.path.join(folder, "titanic.csv"))
+
+data = dataset[["Sex", "Age", "Pclass", "Fare", "Survived"]].copy()
+data["Sex"] = data["Sex"].map({"male": 0, "female": 1})
+
+posisi_train = data[data["Age"].notnull()].index
+posisi_kosong = data[data["Age"].isnull()].index
+
+train_data = data.loc[posisi_train, ["Sex", "Pclass", "Fare", "Survived"]].copy()
+train_label = data.loc[posisi_train, "Age"].copy()
+test_data = data.loc[posisi_kosong, ["Sex", "Pclass", "Fare", "Survived"]].copy()
+
+scaler = MinMaxScaler()
+train_data = scaler.fit_transform(train_data)
+test_data = scaler.transform(test_data)
+
+hasil_prediksi = []
+
+for i in range(len(test_data)):
+    jarak = np.sqrt(((train_data - test_data[i]) ** 2).sum(axis=1))
+    posisi_terdekat = np.argsort(jarak)[:3]
+    label_terdekat = train_label.iloc[posisi_terdekat].to_numpy()
+
+    if label_terdekat[0] == label_terdekat[1] or label_terdekat[0] == label_terdekat[2]:
+        prediksi = label_terdekat[0]
+    elif label_terdekat[1] == label_terdekat[2]:
+        prediksi = label_terdekat[1]
+    else:
+        prediksi = label_terdekat[0]
+
+    hasil_prediksi.append(prediksi)
+
+print("=" * 50)
+print("K-NN K=3 PREDIKSI AGE")
+print("=" * 50)
+print()
+print("Jumlah data uji        :", len(test_data))
+print("Hasil prediksi Age     :", hasil_prediksi)

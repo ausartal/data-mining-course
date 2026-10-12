@@ -31,6 +31,8 @@ Setiap topik dibagi menjadi file assignment kecil agar mudah dijalankan dan dite
 | [`Code/Classification`](Code/Classification/) | k-Nearest Neighbor | Uji k = 1..15 + error ratio |
 | [`Code/Validation Model`](Code/Validation%20Model/) | Validasi model | Hold-Out, 10-Fold, Leave-One-Out |
 | [`Code/Decision Tree`](Code/Decision%20Tree/) | Decision Tree | Klasifikasi Survived + hierarchy pohon |
+| [`Code/Case Study (Hearth Condition)`](Code/Case%20Study%20%28Hearth%20Condition%29/) | Case Study Heart Condition | 36 kombinasi K-NN/Decision Tree + validasi |
+| [`Code/Case Study (Classification for Imputation)`](Code/Case%20Study%20%28Classification%20for%20Imputation%29/) | Case Study Imputasi | K-NN K=3 imputasi Age + klasifikasi Survived |
 
 ## Struktur Repository
 
@@ -38,6 +40,8 @@ Setiap topik dibagi menjadi file assignment kecil agar mudah dijalankan dan dite
 data-mining-course/
 ├── assets/previews/              # Hasil plot untuk dokumentasi
 ├── Code/
+│   ├── Case Study (Classification for Imputation)/
+│   ├── Case Study (Hearth Condition)/
 │   ├── Classification/           # k-NN (assignment1–10)
 │   ├── Data Manipulation & Visualisation/
 │   ├── Data Normalization/
